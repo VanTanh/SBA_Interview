@@ -1,0 +1,55 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+    
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+</IfModule>
+
+ErrorDocument 403 THIS_IS_WEBSITE_PRIVATE_!
+
+ErrorDocument 401 REQUIRE_PASSWORD_!
+
+#Chỉ cho IP công ty truy cập:120.72.106.146
+Order Deny,Allow
+Deny from all
+Allow from 42.114.207.161,171.226.36.49,1.53.5.253,42.115.138.4,1.53.211.144,120.72.106.146,42.115.139.87,42.119.154.120,42.119.154.27,116.109.98.212,42.119.154.200,42.119.154.186,171.252.153.46,42.114.21.252,1.52.205.188
+
+#Tạo kiểm tra username/pass
+#AuthName "Section Name"
+#AuthType Basic
+#AuthUserFile "/home/starboar/.htpasswds/public_html/passwd"
+#Require valid-user
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 128M
+   php_value post_max_size 80000M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 20000M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 128M
+   php_value post_max_size 80000M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 20000M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
