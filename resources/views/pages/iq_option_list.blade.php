@@ -4,7 +4,7 @@
 @parent
 @endsection
 @section('content')
-    <div class="">
+    <div class="h-screen">
         <div class="header-index">
         <div class="header-title option_header">
                     <span>IQ option questions</span>

@@ -1,0 +1,1 @@
+<script src="<?php echo e(URL::asset('/js/jquery-3.4.1.min.js')); ?>"></script><?php /**PATH /Users/SelinaNguyen/Documents/SBA/SBA_Interview/resources/views/user/includes/foot.blade.php ENDPATH**/ ?>

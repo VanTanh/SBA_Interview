@@ -1,0 +1,1 @@
+<?php /**PATH /Users/SelinaNguyen/Documents/SBA/SBA_Interview/resources/views/user/includes/footer.blade.php ENDPATH**/ ?>

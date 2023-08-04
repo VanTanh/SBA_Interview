@@ -72,6 +72,12 @@ Route::middleware('CheckAdmin')->group(function () {
 /*************sba interview ********************/
 
 /* interview-management */
+
+Route::get('/interview', function () {
+    return view('pages.Interview');
+})->name('interview');
+
+
 Route::get('/interview-management', 'InterviewManagementController@index');
 
 Route::get('/interview-management/new', 'InterviewManagementController@getInterviewerNew');

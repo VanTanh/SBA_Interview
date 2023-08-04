@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 
-    <div class="container padding-20">
+    <div class="container padding-20 h-screen">
         <div class="row">
             <div id="staff_new_edit_frm" class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
                 <h2 class="border-bottom">

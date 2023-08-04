@@ -4,7 +4,7 @@
 @parent
 @endsection
 @section('content')
-    <div class="p-0 p-md-3">
+    <div class="p-0 p-md-3 h-screen">
         <div class="header-index d-block d-md-flex">
             <div class="header-title">
                         <span>Interview Management</span>
